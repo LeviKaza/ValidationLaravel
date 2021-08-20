@@ -26,19 +26,19 @@
                     <form action="updateCharacter" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{$character->id}}">
-                        <input type="submit" value="Modif.">
+                        <input type="submit" value="Modif." class="btn btn-warning">
                     </form>
                 </td>
                 <td>
                     <form action="delete" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{$character->id}}">
-                        <input type="submit" value="X">
+                        <input type="submit" value="X" class="btn btn-danger">
                     </form>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
-    <p><a href="addCharacter">Ajouter</a></p>
+    <p><a href="addCharacter" class="btn btn-secondary">Ajouter</a></p>
 @endsection

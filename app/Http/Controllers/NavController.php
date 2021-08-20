@@ -20,13 +20,15 @@ class NavController extends Controller
 
     public function addCharacter()
     {
-        return view('addCharacter');
+        $artists = Artist::all()->sortBy('name');
+        return view('addCharacter', ['artists' => $artists]);
     }
 
     public function updateCharacter(Request $request)
     {
         $characters = Character::findOrFail($request->id);
-        return view('updateCharacter', ['character' => $characters]);
+        $artists = Artist::all()->sortBy('name');
+        return view('updateCharacter', ['character' => $characters, 'artists' => $artists]);
     }
 
     public function artists()

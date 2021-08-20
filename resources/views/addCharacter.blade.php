@@ -19,8 +19,12 @@
             <input type="text" class="form-control" id="formGroupExampleInput3" name="bd">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput4">Artiste :</label>
-            <input type="text" class="form-control" id="formGroupExampleInput4" name="artist_id">
+            <label for="formGroupExampleInput3">Artiste :</label>
+            <select type="text" class="form-control" name="artist_id">
+                @foreach ($artists as $artist)
+                    <option value="{{ $artist->id }}">{{ $artist->name }}</option>
+                @endforeach
+            </select>
         </div>
         <input type="submit" value="Ajouter">
     </form>

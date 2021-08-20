@@ -20,8 +20,18 @@
             <input type="text" class="form-control" id="formGroupExampleInput3" name="bd" value="{{$character->bd}}">
         </div>
         <div class="form-group">
-            <label for="formGroupExampleInput4">Artiste :</label>
-            <input type="text" class="form-control" id="formGroupExampleInput4" name="artist_id" value="{{$character->artist_id}}">
+            <div class="col-sm-8">
+                <label for="formGroupExampleInput3">Artiste :</label>
+                <select type="text" class="form-control" name="artist_id">
+                    @foreach ($artists as $artist)
+                        @if ($character->artist_id === $artist->id)
+                            <option value="{{ $artist->id }}" selected>{{ $artist->name }}</option>
+                        @else
+                            <option value="{{ $artist->id }}">{{ $artist->name }}</option>
+                        @endif
+                    @endforeach
+                </select>
+            </div>
         </div>
         <input type="submit" value="Update">
     </form>
