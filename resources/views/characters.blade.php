@@ -21,7 +21,7 @@
                 <td>{{$character->name}}</td>
                 <td>{{$character->creation_year}}</td>
                 <td>{{$character->bd}}</td>
-                <td>{{$character->artist_id}}</td>
+                <td>{{$character->artist->name}}</td>
                 <td>
                     <form action="updateCharacter" method="POST">
                         @csrf
