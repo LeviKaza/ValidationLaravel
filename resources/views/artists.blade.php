@@ -4,7 +4,7 @@
 @section('title', 'Dessinateurs')
 
 @section('content')
-    <table class="table table-dark">
+    <table class="table table-dark main-contents">
         <thead>
             <tr>
                 <th>Nom</th>

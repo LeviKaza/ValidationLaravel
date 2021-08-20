@@ -4,7 +4,7 @@
 @section('title', 'Ajout Personnage')
 
 @section('content')
-    <form action="add" method="POST">
+    <form action="add" method="POST" class="main-contents">
         @csrf
         <div class="form-group">
             <label for="formGroupExampleInput">Nom :</label>

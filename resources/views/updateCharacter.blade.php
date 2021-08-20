@@ -4,7 +4,7 @@
 @section('title', 'Modifier Personnage')
 
 @section('content')
-    <form action="update" method="POST">
+    <form action="update" method="POST"  class="main-contents">
         @csrf
         <input type="hidden" name="id" value="{{$character->id}}">
         <div class="form-group">
