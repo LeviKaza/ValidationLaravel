@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NavController;
+use App\Http\Controllers\ActionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [NavController::class, 'welcome']);
+Route::get('characters', [NavController::class, 'characters']);
+Route::post('update', [ActionController::class, 'update']);
+Route::post('delete', [ActionController::class, 'delete']);
+Route::post('add', [ActionController::class, 'add']);
+Route::get('addCharacter', [NavController::class, 'addCharacter']);
+Route::post('updateCharacter', [NavController::class, 'updateCharacter']);
+Route::get('artists', [NavController::class, 'artists']);

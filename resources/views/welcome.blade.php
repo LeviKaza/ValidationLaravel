@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Acceuil</title>
-    </head>
-    <body>
-        
-    </body>
-</html>
+@extends('layouts.base')
+@section('css', 'welcome')
+
+@section('title', 'Welcome')
+
+@section('content')
+    <?= "salut" ?>
+@endsection
